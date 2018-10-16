@@ -1,6 +1,10 @@
 window.onload = function() {
     var socket = io.connect('http://localhost:3000');
     var message = document.getElementById('message');
+    console.log(message.toString());
+    if((message.toString()).lastIndexOf(';;')===0){
+        console.log('Bot Command');
+    }
     var handle = document.getElementById('handle');
     var btn = document.getElementById('send');
     var output = document.getElementById('output');
@@ -9,6 +13,7 @@ window.onload = function() {
         //console.log('Button Clicked');
         socket.emit('chat', {
             message: message.value,
+
             handle: handle.value
         });
     });
