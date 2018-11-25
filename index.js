@@ -4,8 +4,8 @@ var app = express();
 const events = require('events');
 var socket = require('socket.io');
 //var ytaudio = require('./audioStream');
-var server = app.listen(3000,function(){
-    console.log('Server running on port 3000');
+var server = app.listen(3030,function(){
+    console.log('Server running on port 3030');
 });
 
 app.use(express.static('public'));
@@ -13,11 +13,12 @@ const linkEmitter = new events.EventEmitter();
 function callPython(message, sendData){
     // console.log('Inside Python');
     var spawn = require("child_process").spawn;
-
-    var process = spawn('python',['./youtube.py', message]);
+    var process = spawn('python',['./get_news.py', message]);
     // console.log('Still There');
     process.stdout.on('data', function(data) {
         //console.log(data.toString());
+        console.log(data);
+        // console.log(data.toString('utf8'));
         linkEmitter.emit('link-received', data);
 
     } );

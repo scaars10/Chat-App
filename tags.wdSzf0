@@ -1,0 +1,19 @@
+BeautifulSoup	youtube.py	/^from bs4 import BeautifulSoup$/;"	i
+urllib	youtube.py	/^import urllib$/;"	i
+requests	youtube.py	/^import requests$/;"	i
+sys	youtube.py	/^import sys$/;"	i
+get_top_result	youtube.py	/^def get_top_result(topic):$/;"	f
+res	youtube.py	/^res = 'https:\/\/www.youtube.com'+get_top_result(sys.argv[1])$/;"	v
+sess.secret	session-test.js	/^var sess = {$/;"	p
+sess.cookie	session-test.js	/^    secret: 'keyboard cat',$/;"	p
+server	session-test.js	/^var server = app.listen(3000, function(){$/;"	v
+requests	get_news.py	/^import requests$/;"	i
+BeautifulSoup	get_news.py	/^from bs4 import BeautifulSoup$/;"	i
+sys	get_news.py	/^import sys$/;"	i
+get_news	get_news.py	/^def get_news(topic):$/;"	f
+express	index.js	/^var express = require('express');$/;"	v
+app	index.js	/^var app = express();$/;"	v
+socket	index.js	/^var socket = require('socket.io');$/;"	v
+server	index.js	/^var server = app.listen(3030,function(){$/;"	v
+callPython	index.js	/^function callPython(message, sendData){$/;"	f
+io	index.js	/^var io = socket(server);$/;"	v
